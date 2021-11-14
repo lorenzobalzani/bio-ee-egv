@@ -1,2 +1,1 @@
-# event-graph-verbalization
-T5X (Flax) model with linear attention for verbalizing biomedical events represented as graphs.
+# Extraction and Verbalization of Biomedical Event Graphsas Text-to-Text Tasks
