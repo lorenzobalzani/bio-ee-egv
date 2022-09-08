@@ -6,7 +6,7 @@ from transformers import(
     Seq2SeqTrainingArguments, 
     Seq2SeqTrainer
 )
-import torch, glob, gc, gdown, time, os
+import torch, glob, gc, time, os
 
 model_name = 'facebook/bart-base'
 batch_size = 2
