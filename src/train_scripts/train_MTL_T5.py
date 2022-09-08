@@ -83,7 +83,6 @@ TaskRegistry.add(
   metric_fns=[functools.partial(
       rouge_top_beam, beam_size=fine_tuning_cfg.beam_size)] # rouge1/2/L
 )
-print(TaskRegistry._REGISTRY)
 
 MixtureRegistry = dataset_providers.MixtureRegistry
 MixtureRegistry.remove("MTL_mixture")
