@@ -9,18 +9,18 @@ def download_folder(id, output):
     gdown.download_folder('https://drive.google.com/drive/folders/' + id, output=output, quiet=False, remaining_ok=True)
 
 def download_summarization_dataset():
-    download_file('1-4I2nWfqDu17bVRFZFSSBRzZiM-Jeg1e', './datasets/summarization/train.tsv')
-    download_file('12-GA-rUn-bKicdtok1mZFggTwVh8zq8S', './datasets/summarization/validation.tsv')
-    download_file('1jvc-ho9r3DKVsOaDpxkuwhgJSsG167oL', './datasets/summarization/test.tsv')
+    download_file('1JVNCzQyrNV0bOh4lpZpIS-qZiSrZcjuD', './datasets/summarization/train.tsv')
+    download_file('1RToJ0ZSQXCO0Gh28eH2Ha89Ukd1Sn7-9', './datasets/summarization/validation.tsv')
+    download_file('1SicrCWpUNhiyISYHxho_dpCBCBKQASZT', './datasets/summarization/test.tsv')
 
 def download_EE_predictions():
-    download_folder('1lWkgWntpJ-7pfNuCmcSaqIEZjbcSSlsf', './model_data/ee/t5x/')
+    download_folder('1A5yTS_sA1aKaAFkCcrRLTSRSMrQHc0Dr', './model_data/ee/t5x/')
 
 def download_model_checkpoints():
-    download_folder('15nNVf-MxojniadUPlPL7lLtB4C_1pB3i', './model_data/')
-    download_folder('1TWKnpRMz0UrFc9ru401MLZDHZLVm2oap', './model_data/')
-    download_folder('1c6WBOEBmTegGkGSPh2_TMkk4Sc1v9U4H', './model_data/')
-    download_folder('1OWfvJJWlo7nHTnh0sZgbbzGa2x_EfJTF', './model_data/')
+    download_folder('15vg-2tqHXlezz6N3cKWMeLVECUuZX2kr', './model_data/')
+    download_folder('1eJKG5BOo5BQ2pEeSS3EmyhssqJJb7tr3', './model_data/')
+    download_folder('1ntLlX81Hl1G0qmTwIwdrt0Hdmnx7eH7b', './model_data/')
+    download_folder('1UAYBRO-pU5rjjt1wAfWfQZa00Q4wczm5', './model_data/')
 
 download_summarization_dataset()
 download_model_checkpoints()
