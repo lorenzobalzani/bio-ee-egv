@@ -16,7 +16,7 @@ from utils.t5x_utils.training import train
 import os
 import tensorflow as tf
 
-data_dir = "../../data/datasets/"
+data_dir = "../../data/datasets/bioe2t/"
 train_file = "train.tsv"
 validation_file = "validation.tsv"
 
@@ -53,4 +53,4 @@ TaskRegistry.add(
   metric_fns=[functools.partial(
       rouge_top_beam, beam_size=fine_tuning_cfg.beam_size)] # rouge1/2/L
 )
-train(model_dir="../../data/model_data/linear_attention/model_checkpoints_paper/", config=fine_tuning_cfg)
+train(model_dir="../../data/model_data/egv/best_checkpoint/", config=fine_tuning_cfg)

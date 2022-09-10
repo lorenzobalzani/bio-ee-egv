@@ -11,9 +11,9 @@ from utils.t5x_utils.test import test
 import os
 import tensorflow as tf
 
-data_dir = "../../data/datasets/"
-train_file = "train_sum.tsv"
-test_file = "test_sum.tsv"
+data_dir = "../../data/datasets/summarization/"
+train_file = "train.tsv"
+test_file = "test.tsv"
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
@@ -52,4 +52,4 @@ TaskRegistry.add(
   metric_fns=[functools.partial(
       rouge_top_beam, beam_size=fine_tuning_cfg.beam_size)] # rouge1/2/L
 )
-test(task_name="summarization_task", model_dir="../data/model_data/summarization/model_checkpoints/", config=fine_tuning_cfg, output_prediction_postfix="sum")
+test(task_name="summarization_task", model_dir="../data/model_data/summarization/best_checkpoint/", config=fine_tuning_cfg, output_prediction_postfix="sum")

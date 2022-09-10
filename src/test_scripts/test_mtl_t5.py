@@ -13,8 +13,6 @@ import os
 import tensorflow as tf
 
 data_dir = "../../data/datasets/"
-train_file = "train_sum.tsv"
-test_file = "test_sum.tsv"
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
@@ -45,8 +43,8 @@ TaskRegistry.add(
   "event_extraction_task",
   dataset_providers.TextLineTask,
   split_to_filepattern = {
-      "train": os.path.join(data_dir, "train.tsv"),
-      "validation": os.path.join(data_dir, "validation.tsv"),
+      "train": os.path.join(data_dir, "biot2e", "train.tsv"),
+      "validation": os.path.join(data_dir, "biot2e", "validation.tsv"),
   },
   skip_header_lines = 1,
   text_preprocessor = preprocessors.preprocess_tsv,
@@ -62,8 +60,8 @@ TaskRegistry.add(
   "event_graph_verbalization_task",
   dataset_providers.TextLineTask,
   split_to_filepattern = {
-      "train": os.path.join(data_dir, "train.tsv"),
-      "validation": os.path.join(data_dir, "validation.tsv"),
+      "train": os.path.join(data_dir, "bioe2t", "train.tsv"),
+      "validation": os.path.join(data_dir, "bioe2t", "validation.tsv"),
   },
   skip_header_lines = 1,
   text_preprocessor = preprocessors.preprocess_tsv,
@@ -79,8 +77,8 @@ TaskRegistry.add(
   "summarization_task",
   dataset_providers.TextLineTask,
   split_to_filepattern = {
-      "train": os.path.join(data_dir, "train_sum.tsv"),
-      "validation": os.path.join(data_dir, test_file)
+      "train": os.path.join(data_dir, "summarization", "train.tsv"),
+      "validation": os.path.join(data_dir, "summarization", "validation.tsv")
   },
   skip_header_lines = 1,
   text_preprocessor = preprocessors.preprocess_tsv,
@@ -94,4 +92,4 @@ MixtureRegistry.add(
     "MTL_mixture",
     ["summarization_task", "event_graph_verbalization_task", "event_extraction_task"],
     1.0)
-test(task_name="summarization_task", model_dir="../../data/model_data/MTL/model_checkpoints/", config=fine_tuning_cfg, output_prediction_postfix="MTL_sum")
+test(task_name="summarization_task", model_dir="../../data/model_data/mtl/best_checkpoint/", config=fine_tuning_cfg, output_prediction_postfix="MTL_sum")

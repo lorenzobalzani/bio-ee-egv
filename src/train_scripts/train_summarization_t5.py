@@ -15,9 +15,9 @@ import lazyprofiler.GetStats as gs
 from utils.t5x_utils.training import train
 import tensorflow as tf
 
-data_dir = "../../data/datasets/"
-train_file = "train_sum.tsv"
-validation_file = "validation_sum.tsv"
+data_dir = "../../data/datasets/summarization/"
+train_file = "train.tsv"
+validation_file = "validation.tsv"
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
@@ -52,4 +52,4 @@ TaskRegistry.add(
   metric_fns=[functools.partial(
       rouge_top_beam, beam_size=fine_tuning_cfg.beam_size)] # rouge1/2/L
 )
-train(model_dir="../../data/model_data/summarization/model_checkpoints/", config=fine_tuning_cfg)
+train(model_dir="../../data/model_data/summarization/best_checkpoint/", config=fine_tuning_cfg)

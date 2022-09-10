@@ -20,7 +20,7 @@ sess = tf.compat.v1.Session(config=config)
 fine_tuning_cfg = t5_base.get_config()
 fine_tuning_cfg.beam_size = 1
 
-with zipfile.ZipFile("../../data/datasets/single_task_validation_sets/test_EE.zip", 'r') as zip_ref:
+with zipfile.ZipFile("../../data/datasets/single_task_validation_sets/test_ee.zip", 'r') as zip_ref:
     zip_ref.extractall("../../data/datasets/single_task_validation_sets/")
 
 datasetsNames = ['gro-2013', 'mlee', 'cg-2013', 'pc-2013', 'ge-2013', 'genia-mk', 'ge-2011', 'id-2011', 'epi-2011', 'st-09']
@@ -46,4 +46,4 @@ for dataset in datasetsNames:
         rouge_top_beam, beam_size=fine_tuning_cfg.beam_size)] # rouge1/2/L
     )
     print("Evaluating EE on " + dataset + " dataset.")
-    test(task_name="event_extraction_task", model_dir="../../data/model_data/event-extraction/model_checkpoints/", config=fine_tuning_cfg, output_prediction_postfix=dataset, ee=True)
+    test(task_name="event_extraction_task", model_dir="../../data/model_data/ee/best_checkpoint/", config=fine_tuning_cfg, output_prediction_postfix=dataset, ee=True)

@@ -36,7 +36,7 @@ def generate_predictions(batch):
 
     return batch
 
-with zipfile.ZipFile("../../../data/datasets/single_task_validation_sets/test_EE.zip", 'r') as zip_ref:
+with zipfile.ZipFile("../../../data/datasets/single_task_validation_sets/test_ee.zip", 'r') as zip_ref:
     zip_ref.extractall("../../../data/datasets/single_task_validation_sets/")
 
 datasetsNames = ['gro-2013', 'mlee', 'cg-2013', 'pc-2013', 'ge-2013', 'genia-mk', 'ge-2011', 'id-2011', 'epi-2011', 'st-09']
