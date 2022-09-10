@@ -8,11 +8,11 @@ from t5 import data
 from t5.data import dataset_providers
 from t5.data import preprocessors
 from t5.evaluation import metrics
-from configs import EGV_T5 as t5_base
+from configs import egv_t5 as t5_base
 import functools
 from rouge_utils import rouge_top_beam
 import lazyprofiler.GetStats as gs
-from utils.T5X_utils.training import train
+from utils.t5x_utils.training import train
 import os
 import tensorflow as tf
 

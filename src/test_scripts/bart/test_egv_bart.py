@@ -8,7 +8,7 @@ tokenizer = BartTokenizer.from_pretrained(model_name)
 batch_size = 16
 
 def load_model():
-  checkpoints = glob.glob('../../../data/model_data/EGV/BART/model_checkpoints/checkpoint-*')
+  checkpoints = glob.glob('../../../data/model_data/EGV/bart/model_checkpoints/checkpoint-*')
   if len(checkpoints) > 0:
     model = BartForConditionalGeneration.from_pretrained(checkpoints[0])
     print("Loaded checkpoint from " + checkpoints[0])

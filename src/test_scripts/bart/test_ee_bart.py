@@ -8,7 +8,7 @@ tokenizer = BartTokenizer.from_pretrained(model_name)
 batch_size = 16
 
 def load_model():
-  checkpoints = glob.glob('../../../data/model_data/EE/BART/model_checkpoints/checkpoint-*')
+  checkpoints = glob.glob('../../../data/model_data/EE/bart/model_checkpoints/checkpoint-*')
   if len(checkpoints) > 0:
     model = BartForConditionalGeneration.from_pretrained(checkpoints[0])
     print("Loaded checkpoint from " + checkpoints[0])
@@ -36,13 +36,13 @@ def generate_predictions(batch):
 
     return batch
 
-with zipfile.ZipFile("../../../data/datasets/Eval_sets/test_EE.zip", 'r') as zip_ref:
-    zip_ref.extractall("../../../data/datasets/Eval_sets/")
+with zipfile.ZipFile("../../../data/datasets/single_task_validation_sets/test_EE.zip", 'r') as zip_ref:
+    zip_ref.extractall("../../../data/datasets/single_task_validation_sets/")
 
 datasetsNames = ['gro-2013', 'mlee', 'cg-2013', 'pc-2013', 'ge-2013', 'genia-mk', 'ge-2011', 'id-2011', 'epi-2011', 'st-09']
 
 for dataset in datasetsNames:
-  test_data = Dataset.from_pandas(pd.read_csv("../../../data/datasets/Eval_sets/test_EE_" + dataset + ".tsv", sep='\t'))
+  test_data = Dataset.from_pandas(pd.read_csv("../../../data/datasets/single_task_validation_sets/test_EE_" + dataset + ".tsv", sep='\t'))
   results = test_data.map(generate_predictions, batched=True, batch_size=batch_size, remove_columns=["event"])
   pred_str = results["predicted_events"]
   label_str = results["target_events"]

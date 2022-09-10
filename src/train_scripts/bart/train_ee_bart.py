@@ -78,9 +78,9 @@ def preprocess_function(batch):
     return batch
 
 # Load datasets
-train_dataset = Dataset.from_pandas(pd.read_csv('../../../data/datasets/train_ee.tsv', sep='\t'))
-val_dataset = Dataset.from_pandas(pd.read_csv('../../../data/datasets/validation_ee.tsv', sep='\t'))
-test_dataset = Dataset.from_pandas(pd.read_csv('../../../data/datasets/test_ee.tsv', sep='\t'))
+train_dataset = Dataset.from_pandas(pd.read_csv('../../../data/datasets/biot2e/train.tsv', sep='\t'))
+val_dataset = Dataset.from_pandas(pd.read_csv('../../../data/datasets/biot2e/validation.tsv', sep='\t'))
+test_dataset = Dataset.from_pandas(pd.read_csv('../../../data/datasets/biot2e/test.tsv', sep='\t'))
 
 train_dataset_model_input = train_dataset.map(
     preprocess_function,
@@ -108,7 +108,7 @@ val_dataset_model_input.set_format(
 
 # Utility functions
 def load_model():
-  checkpoints = glob.glob('../../../data/model_data/EE/BART/model_checkpoints/checkpoint-*')
+  checkpoints = glob.glob('../../../data/model_data/EE/bart/model_checkpoints/checkpoint-*')
   if len(checkpoints) > 0:
     model = BartForConditionalGeneration.from_pretrained("./" + checkpoints[0])
     print("Loaded checkpoint from " + checkpoints[0])
@@ -120,7 +120,7 @@ def load_model():
 model = load_model().to("cuda:1" if torch.cuda.is_available() else "cpu")
 
 args = Seq2SeqTrainingArguments(
-    output_dir = "../../../data/model_data/EE/BART/model_checkpoints/", # where the model predictions and checkpoints will be written
+    output_dir = "../../../data/model_data/EE/bart/model_checkpoints/", # where the model predictions and checkpoints will be written
     evaluation_strategy = "epoch",  # to adopt during training
     save_strategy = "steps",
     per_device_train_batch_size = batch_size*2,
