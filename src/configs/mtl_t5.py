@@ -25,11 +25,11 @@ def get_config():
   config.restore_t5_checkpoint = (
       'gs://t5-data/pretrained_models/base/model.ckpt-999900')
   # Name of T5 task/mixture to use for finetuning.
-  config.mixture_or_task_name = 'MTL_mixture'
+  config.mixture_or_task_name = 'mtl_mixture'
   # Whether to use T5 preprocessing cache for train task/mixture.
   config.train_use_cached = False
   # Name of T5 task/mixture to use for evaluation.
-  config.eval_mixture_or_task_name = 'MTL_mixture'
+  config.eval_mixture_or_task_name = 'mtl_mixture'
   # Whether to use T5 preprocessing cache for eval task/mixture.
   config.eval_use_cached = False
   # Name of T5 task/mixture split to use for evaluation.
