@@ -13,7 +13,7 @@ def download_summarization_dataset():
     download_file('1RToJ0ZSQXCO0Gh28eH2Ha89Ukd1Sn7-9', './datasets/summarization/validation.tsv')
     download_file('1SicrCWpUNhiyISYHxho_dpCBCBKQASZT', './datasets/summarization/test.tsv')
 
-def download_EE_predictions():
+def download_ee_predictions():
     download_folder('1A5yTS_sA1aKaAFkCcrRLTSRSMrQHc0Dr', './model_data/ee/t5x/')
 
 def download_model_checkpoints():
@@ -24,4 +24,4 @@ def download_model_checkpoints():
 
 download_summarization_dataset()
 download_model_checkpoints()
-download_EE_predictions()
+download_ee_predictions()
