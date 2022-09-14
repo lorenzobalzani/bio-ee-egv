@@ -15,9 +15,7 @@ To this end, we present a new event graph linearization technique and release hi
 * [Requirements](#Requirements)
 * [Datasets](#Datasets)
   * [Original EE datasets](#Original-EE-datasets)
-  * [Preprocessing](#Preprocessing)
-  * [BioE2T](#BioE2T)
-  * [BioT2E](#BioT2E)
+  * [BioT2E and BioE2T](#BioT2E-and-BioE2T)
 * [Models](#Models)
   * [Training](#Training)
   * [Evaluation](#Evaluation)
@@ -35,8 +33,7 @@ Python Packages
 ## Datasets
 
 ### Original EE datasets
-Our BioE2T and BioT2E datasets are derived from 10 influential benchmarks originally designed for biomedical EE (BEE) and primarily released within BioNLP-ST competitions.
-For ease of use, we include these freely accessible benchmarks directly within the repository.
+Our BioE2T and BioT2E datasets are derived from 10 influential benchmarks originally designed for biomedical EE (BEE) and primarily released within BioNLP-ST competitions. For your convenience, we include these freely accessible benchmarks directly within the repository: `data/datasets/original_datasets.tar.gz`.
 
 <table>
   <tr>
@@ -106,6 +103,9 @@ For ease of use, we include these freely accessible benchmarks directly within t
    <th>174 entity types, 126 event types</th>
   </tr>
 </table>
+
+## BioT2E and BioE2T
+We publicly release our BioT2E (`data/datasets/biot2e`) and BioE2T (`data/datasets/bioe2t`) text-to-text datasets for event extraction and event graph verbalization, respectively. For replicability, we also provide the preprocessing, filtering, and sampling scripts used for their automatic generation mostly from EE datasets following a _.txt/.a1/.a2_ or _XML_ structure.
 
 ## ✉ Contacts
 
