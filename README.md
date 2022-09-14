@@ -8,6 +8,10 @@ Almost all contributions in the event realm orbit around semantic parsing, usual
 We present the first lightweight framework to solve both event extraction and event verbalization with a unified text-to-text approach, allowing us to fuse all the resources so far designed for different tasks.
 To this end, we present a new event graph linearization technique and release highly comprehensive event-text paired datasets (BioT2E and BioE2T), covering more than 150 event types from multiple biology subareas (English language). By streamlining parsing and generation to translations, we propose baseline transformer model results according to multiple biomedical text mining benchmarks and natural language generation metrics. Our extractive models achieve greater state-of-the-art performance than single-task competitors and show promising capabilities for the controlled generation of coherent natural language utterances from structured data.
 
+<p align="center">
+  <img src="./figures/text_event_pair.png" title="text-event pair" alt="" width="500">
+</p>
+
 * [Requirements](#Requirements)
 * [Datasets](#Datasets)
   * [Original EE datasets](#Original-EE-datasets)
@@ -103,7 +107,23 @@ For ease of use, we include these freely accessible benchmarks directly within t
   </tr>
 </table>
 
+## ✉ Contacts
+
+* Giacomo Frisoni, [giacomo.frisoni[at]unibo.it](mailto:giacomo.frisoni@unibo.it)
+* Balzani Lorenzo, [balzanilo[at]icloud.com](mailto:balzanilo@icloud.com)
+* Gianluca Moro, [gianluca.moro[at]unibo.it](mailto:paolo.italiani@studio.unibo.it)
+
+If you have troubles, suggestions, or ideas, the [Discussion](https://github.com/disi-unibo-nlp/bio-ee-egv/discussions) board might have some relevant information. If not, you can post your questions there 💬🗨.
+
 ## Citation
 
 If you found this repository useful, please consider citing the following paper:
-...
+
+    @article{frisoni-etal-2022-bio-ee-egv,
+      title     = {Text-to-Text Extraction and Verbalization of Biomedical Event Graphs},
+      author    = {Giacomo, Frisoni and Gianluca, Moro and Lorenzo, Balzani},
+      booktitle = {Proceedings of the 30th International Conference on Computational Linguistics},
+      pages     = {1--18},
+      publisher = {{COLING}},
+      year      = {2022}
+    }
