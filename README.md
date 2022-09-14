@@ -1,9 +1,12 @@
 # Text-to-Text Extraction and Verbalization of Biomedical Event Graphs
 
 This repository provides the source code & data of our paper: [Text-to-Text Extraction and Verbalization of Biomedical Event Graphs]().
-We present a new event linearization approach based on formal grammar, reframing the extraction and verbalization of biomedical events (EE and EGV) as seq2seq tasks.
-We introduce BioT2E and BioE2T, two large scale datasets for text- or graph-conditioned biomedical sequence modeling obtained by aggregating and preprocessing gold annotations coming from 10 popular EE benchmarks.
-Based on these contributions, we propose baseline transformer model results according to several biomedical text mining benchmarks and NLG metrics, achieving greater or comparable state-of-the-art results than previous solutions.
+
+In bioinformatics, events represent complex interactions mentioned in the scientific literature, involving a set of entities (e.g., proteins, genes, diseases, drugs), each contributing with a specific semantic role (e.g., theme, cause, site). For instance, biomedical events include molecular reactions, organism-level outcomes, and adverse drug reactions.
+Text-to-event (or event extraction, EE) and event-to-text (or event graph verbalization, EGV) systems effectively bridge natural language and symbolic representations. They provide a step towards decoupling concept units (what to say) from language competencies (how to say it).
+Almost all contributions in the event realm orbit around semantic parsing, usually employing discriminative architectures and cumbersome multi-step pipelines limited to a small number of target interaction types. Despite being less explored, EGV holds a lot of potential as well, targeting the generation of informative text constrained on semantic graphs, crucial in applications like conversational agents and summarization systems. 
+We present the first lightweight framework to solve both event extraction and event verbalization with a unified text-to-text approach, allowing us to fuse all the resources so far designed for different tasks.
+To this end, we present a new event graph linearization technique and release highly comprehensive event-text paired datasets (BioT2E and BioE2T), covering more than 150 event types from multiple biology subareas (English language). By streamlining parsing and generation to translations, we propose baseline transformer model results according to multiple biomedical text mining benchmarks and natural language generation metrics. Our extractive models achieve greater state-of-the-art performance than single-task competitors and show promising capabilities for the controlled generation of coherent natural language utterances from structured data.
 
 * [Requirements](#Requirements)
 * [Datasets](#Datasets)
@@ -23,7 +26,7 @@ General
 - CUDA (verified on 11.1)
 
 Python Packages
-- See requirements.txt
+- See `requirements.txt`
 
 ## Datasets
 
