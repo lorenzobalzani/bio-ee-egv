@@ -19,6 +19,7 @@ To this end, we present a new event graph linearization technique and release hi
 * [Models](#Models)
   * [Training](#Training)
   * [Evaluation](#Evaluation)
+* [Contacts](#Contacts)
 * [Citation](#Citation)
 
 ## Requirements
@@ -104,8 +105,10 @@ Our BioE2T and BioT2E datasets are derived from 10 influential benchmarks origin
   </tr>
 </table>
 
-## BioT2E and BioE2T
+### BioT2E and BioE2T
 We publicly release our BioT2E (`data/datasets/biot2e`) and BioE2T (`data/datasets/bioe2t`) text-to-text datasets for event extraction and event graph verbalization, respectively. For replicability, we also provide the preprocessing, filtering, and sampling scripts used for their automatic generation mostly from EE datasets following a _.txt/.a1/.a2_ or _XML_ structure.
+
+## Models
 
 ## ✉ Contacts
 
