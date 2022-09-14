@@ -26,7 +26,7 @@ General
 - CUDA (verified on 11.1)
 
 Python Packages
-- See `requirements.txt`
+- See `docker/requirements.txt`
 
 ## Datasets
 
