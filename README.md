@@ -152,22 +152,30 @@ We trained and evaluated T5 and BART models.
 
 <table>
   <tr>
-    <th rowspan="2">EE</th>
+    <th rowspan="3">EE</th>
     <th>Trained model</th>
     <th>Val F1 (%), AVG on 10 benchmarks</th>
   </tr>
   <tr>
-    <th>T5[BioT2E] <a href="">[link]</a></th>
-    <th>80.245</th>
+    <th>T5[BioT2E] <a href="https://drive.google.com/file/d/1uZj5aF9EBWv_4gMYRwfmCtnmUDmunw3v/view?usp=sharing">[link]</a></th>
+    <th>80.25</th>
   </tr>
   <tr>
-    <th rowspan="2">EGV</th>
+    <th>BART[BioT2E] <a href="https://drive.google.com/file/d/1wT3SfP3zvvtCHlv-sjV3qUvnskOZ6Qio/view?usp=sharing">[link]</a></th>
+    <th>73.50</th>
+  </tr>
+  <tr>
+    <th rowspan="3">EGV</th>
     <th>Trained model</th>
     <th>Val ROUGE-1/2/L F1 AVG (%)</th>
   </tr>
   <tr>
-    <th>T5[BioE2T] <a href="">[link]</a></th>
-    <th>65.4</th>
+    <th>T5[BioE2T] <a href="https://drive.google.com/file/d/1U09wyt2fEpDeKgmPdtvghIInrzf9GpPQ/view?usp=sharing">[link]</a></th>
+    <th>65.40</th>
+  </tr>
+  <tr>
+    <th>BART[BioE2T] <a href="https://drive.google.com/file/d/1CSsUlbH_-ItE9tt8oC3LFNJz7fyIwm3-/view?usp=sharing">[link]</a></th>
+    <th>54.30</th>
   </tr>
 </table>
 
