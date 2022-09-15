@@ -18,7 +18,10 @@ To this end, we present a new event graph linearization technique and release hi
   * [BioT2E and BioE2T](#BioT2E-and-BioE2T)
 * [Models](#Models)
   * [Training](#Training)
+    * [T5X](#T5X)
+    * [BART](#BART)
   * [Evaluation](#Evaluation)
+  * [Checkpoints](#Checkpoints)
 * [Contacts](#Contacts)
 * [Citation](#Citation)
 
@@ -110,10 +113,45 @@ We publicly release our BioT2E (`data/datasets/biot2e`) and BioE2T (`data/datase
 
 ## Models
 
+We trained and evaluated T5 and BART models.
+* We reimplemented T5-Base (∼220M parameters, 12-layers, 768-hidden, 12- heads) in Flax (T5X) starting from the [Google Research codebase](https://github.com/google-research/t5x); see `https://github.com/disi-unibo-nlp/bio-ee-egv/blob/main/src/utils/t5x`.
+* We built our BART-Base (∼139M, 12-layers, 768-hidden, 16-heads) model in PyTorch using the [HuggingFace’s Transformers library](https://huggingface.co/transformers/model_doc/bart.html).
+
+### Training
+
+#### T5X
+
+* EE → `python3 ./src/train_scripts/t5x/train_ee_t5.py`
+* EGV → `python3 ./src/train_scripts/t5x/train_egv_t5.py`
+* PubMed Summ → `python3 ./src/train_scripts/t5x/train_summarization_t5.py`
+* Multi-task Learning (EE + EGV + PubMed Summ) → `python3 ./src/train_scripts/t5x/train_mtl_t5.py`
+
+#### BART
+
+* EE → `python3 ./src/train_scripts/bart/train_ee_bart.py`
+* EGV → `python3 ./src/train_scripts/bart/train_egv_bart.py`
+
+### Evaluation
+
+1. Generate prediction files using the following scripts.
+2. Check the evaluation notebook (`./notebooks/evaluate_ee.ipynb`) to run the automatic evaluation.
+
+#### T5X
+
+* EE → `python3 ./src/test_scripts/t5x/test_ee_t5.py`
+* EGV → `python3 ./src/test_scripts/t5x/test_egv_t5.py`
+* PubMed Summ → `python3 ./src/test_scripts/t5x/test_summarization_t5.py`
+* Multi-task Learning (EE + EGV + PubMed Summ) → `python3 ./src/test_scripts/t5x/test_mtl_t5.py`
+
+#### BART
+
+* EE → `python3 ./src/test_scripts/bart/test_ee_bart.py`
+* EGV → `python3 ./src/test_scripts/bart/test_egv_bart.py`
+
 ## ✉ Contacts
 
 * Giacomo Frisoni, [giacomo.frisoni[at]unibo.it](mailto:giacomo.frisoni@unibo.it)
-* Balzani Lorenzo, [balzanilo[at]icloud.com](mailto:balzanilo@icloud.com)
+* Lorenzo Balzani, [balzanilo[at]icloud.com](mailto:balzanilo@icloud.com)
 * Gianluca Moro, [gianluca.moro[at]unibo.it](mailto:paolo.italiani@studio.unibo.it)
 
 If you have troubles, suggestions, or ideas, the [Discussion](https://github.com/disi-unibo-nlp/bio-ee-egv/discussions) board might have some relevant information. If not, you can post your questions there 💬🗨.
