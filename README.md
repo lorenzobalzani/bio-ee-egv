@@ -109,7 +109,7 @@ Our BioE2T and BioT2E datasets are derived from 10 influential benchmarks origin
 </table>
 
 ### BioT2E and BioE2T
-We publicly release our BioT2E (`data/datasets/biot2e`) and BioE2T (`data/datasets/bioe2t`) text-to-text datasets for event extraction and event graph verbalization, respectively. For replicability, we also provide the preprocessing, filtering, and sampling scripts used for their automatic generation mostly from EE datasets following a _.txt/.a1/.a2_ or _XML_ structure.
+We publicly release our BioT2E (`data/datasets/biot2e`) and BioE2T (`data/datasets/bioe2t`) text-to-text datasets for event extraction and event graph verbalization, respectively. For replicability, we also provide the preprocessing, filtering, and sampling scripts (`notebooks/create_datasets.ipynb`) used for their automatic generation mostly from EE datasets following a _.txt/.a1/.a2_ or _.ann_ structure.
 
 ## Models
 
