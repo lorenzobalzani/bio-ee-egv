@@ -148,11 +148,36 @@ We trained and evaluated T5 and BART models.
 * EE → `python3 ./src/test_scripts/bart/test_ee_bart.py`
 * EGV → `python3 ./src/test_scripts/bart/test_egv_bart.py`
 
+### Checkpoints
+
+<table>
+  <tr>
+    <th rowspan="2">EE</th>
+    <th>Trained model</th>
+    <th>Dev F1 (%), AVG on 10 benchmarks</th>
+  </tr>
+  <tr>
+    <th>T5[BioT2E] <a href="">[link]</a></th>
+    <th>80.245</th>
+  </tr>
+  <tr>
+    <th rowspan="2">EGV</th>
+    <th>Trained model</th>
+    <th>ROUGE-1/2/L AVG</th>
+  </tr>
+  <tr>
+    <th>T5[BioE2T] <a href="">[link]</a></th>
+    <th>65.4</th>
+  </tr>
+</table>
+
 ## ✉ Contacts
 
-* Giacomo Frisoni, [giacomo.frisoni[at]unibo.it](mailto:giacomo.frisoni@unibo.it)
-* Lorenzo Balzani, [balzanilo[at]icloud.com](mailto:balzanilo@icloud.com)
+* Giacomo Frisoni, [giacomo.frisoni[at]unibo.it](mailto:giacomo.frisoni@unibo.it) ♣
+* Lorenzo Balzani, [balzanilo[at]icloud.com](mailto:balzanilo@icloud.com) ♣
 * Gianluca Moro, [gianluca.moro[at]unibo.it](mailto:paolo.italiani@studio.unibo.it)
+
+♣ = Mantainers
 
 If you have troubles, suggestions, or ideas, the [Discussion](https://github.com/disi-unibo-nlp/bio-ee-egv/discussions) board might have some relevant information. If not, you can post your questions there 💬🗨.
 
