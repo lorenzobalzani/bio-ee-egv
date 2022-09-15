@@ -163,7 +163,7 @@ We trained and evaluated T5 and BART models.
   <tr>
     <th rowspan="2">EGV</th>
     <th>Trained model</th>
-    <th>ROUGE-1/2/L AVG</th>
+    <th>ROUGE-1/2/L F1 AVG</th>
   </tr>
   <tr>
     <th>T5[BioE2T] <a href="">[link]</a></th>
