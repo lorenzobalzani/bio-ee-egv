@@ -182,8 +182,8 @@ We trained and evaluated T5 and BART models.
 ## ✉ Contacts
 
 * Giacomo Frisoni, [giacomo.frisoni[at]unibo.it](mailto:giacomo.frisoni@unibo.it) ♣
-* Lorenzo Balzani, [balzanilo[at]icloud.com](mailto:balzanilo@icloud.com) ♣
 * Gianluca Moro, [gianluca.moro[at]unibo.it](mailto:paolo.italiani@studio.unibo.it)
+* Lorenzo Balzani, [balzanilo[at]icloud.com](mailto:balzanilo@icloud.com) ♣
 
 ♣ = Mantainers
 
@@ -191,13 +191,18 @@ If you have troubles, suggestions, or ideas, the [Discussion](https://github.com
 
 ## Citation
 
-If you found this repository useful, please consider citing the following paper:
+If you use the reported code, datasets, or models in your research, please cite:
 
-    @article{frisoni-etal-2022-bio-ee-egv,
-      title     = {Text-to-Text Extraction and Verbalization of Biomedical Event Graphs},
-      author    = {Giacomo, Frisoni and Gianluca, Moro and Lorenzo, Balzani},
-      booktitle = {Proceedings of the 30th International Conference on Computational Linguistics},
-      pages     = {1--18},
-      publisher = {{COLING}},
-      year      = {2022}
+    @inproceedings{frisoni-etal-2022-text,
+      title = "Text-to-Text Extraction and Verbalization of Biomedical Event Graphs",
+      author = "Frisoni, Giacomo  and
+        Moro, Gianluca  and
+        Balzani, Lorenzo",
+      booktitle = "Proceedings of the 29th International Conference on Computational Linguistics",
+      month = oct,
+      year = "2022",
+      address = "Gyeongju, Republic of Korea",
+      publisher = "International Committee on Computational Linguistics",
+      url = "https://aclanthology.org/2022.coling-1.238",
+      pages = "2692--2710"
     }
